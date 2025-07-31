@@ -2,14 +2,23 @@
 
 ## Overview
 
-This script monitors backend image loads for **Nike SKUs** on [Supply Store](https://www.supplystore.com.au), a boutique sneaker retailer known for its sluggish site performance during limited releases. By detecting when product images become available at predictable URL patterns, it can signal when a product is being staged for launch—typically within one hour of the drop. Unfortunately they have switched website providers from custom to Magento so this no longer works.
+This script monitors backend image loads for **Nike SKUs** on [Supply Store](https://www.supplystore.com.au), a boutique sneaker retailer known for its sluggish site performance during limited releases. By detecting when product images become available at predictable URL patterns, it can signal when a product is being staged for launch, typically within one hour of the drop. Unfortunately they have switched website providers from custom to Magento so this no longer works.
 
 Although originally written over 5 years ago, this monitor proved highly profitable and reliable. It exploited a consistent URL structure used for product image uploads:
 
 https://www.supplystore.com.au/images/items/{SKU}/{SKU}/1.jpg
 
-
 Once an image loads successfully (HTTP 200), the script assumes the product is active in the backend and sends a Discord webhook alert, allowing users to pre-emptively log in before the frontend release.
+
+---
+
+## How It Was Discovered
+
+The idea behind this monitor originated from observing early alerts in several sneaker groups about upcoming Nike drops on Supply Store. While some believed these groups were accessing hidden backend data, it was later revealed that one group had inside information through personal connections with staff.
+
+This prompted a deeper investigation into the website’s behavior, looking for any preloading of such products on their website. I discovered that they **preloaded images on the backend using a consistent and predictable URL format**. Unfortunately after a while I foolishly made these alerts available to the whole group with the sku inside the alert prompting other groups to do their own investigation. Had I left out the SKU and only had the general title attached it likely would've gone under the radar.
+
+
 
 ---
 
