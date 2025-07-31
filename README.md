@@ -69,3 +69,5 @@ This loop continues indefinitely, making it ideal for 24/7 monitoring.
 <img width="444" height="640" alt="image" src="https://github.com/user-attachments/assets/22565d40-5ebe-472a-80dd-998e3ad29327" />
 
 Here it is working for the very anticipated Travis Scott x Nike Merchandise. It went on to drop 3 minutes later with our group nearly clearing all of the available stock.
+
+These items resold for around $100 AUD profit per item for the hoodies and pants with the t-shirts being a little less.
