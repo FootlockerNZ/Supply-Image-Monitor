@@ -11,7 +11,7 @@ log = logger().log
 ctypes.windll.kernel32.SetConsoleTitleW('Supply Store Backend Monitor')
 
 try:
-    groups = json.loads(open('backendbranding.json').read())['groups']
+    groups = json.loads(open('branding.json').read())['groups']
 except:
     log('Failed to load branding. Exiting...')
     sleep(2)
