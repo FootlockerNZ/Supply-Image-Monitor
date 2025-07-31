@@ -8,7 +8,7 @@ from colorama import init
 from classes.logger import logger
 log = logger().log
 
-ctypes.windll.kernel32.SetConsoleTitleW('Supply Store Backend Monitor')
+ctypes.windll.kernel32.SetConsoleTitleW('Supply Store Image Monitor')
 
 try:
     groups = json.loads(open('branding.json').read())['groups']
